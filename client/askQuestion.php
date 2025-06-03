@@ -1,25 +1,27 @@
-<div class="container margin-top-15">
-    <h1 class="offset-sm-5 margin-bottom-15">Ask a Question</h1>
-    <form method="post" action="./server/requests.php">
-        <div class="col-6 offset-sm-3 margin-bottom-15">
-            <label for="title" class="form-label">Title</label>
-            <input type="text" name="title" class="form-control" id="title" placeholder="Enter Question">
-        </div>
-        <div class="col-6 offset-sm-3 margin-bottom-15">
-            <label for="description" class="form-label">Description</label>
-            <textarea type="text" name="description" class="form-control" id="description"
-                placeholder="Enter Description"></textarea>
-        </div>
-        <!-- <div class="col-6 offset-sm-3 margin-bottom-15">
-            <label for="tags" class="form-label">Tags</label>
-            <input type="text" name="tags" class="form-control" id="tags" placeholder="Enter tags">
-        </div> -->
-            <?php
-            include("questionCategory.php");
-            ?>
+<div class="max-w-lg mx-auto mt-10 bg-white shadow-md rounded-lg p-8">
+  <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">Ask a Question</h1>
 
-        <div class="col-6 offset-sm-3 margin-bottom-15">
-            <button type="submit" name="askQuestion" class="btn btn-primary">Post Question</button>
-        </div>
-    </form>
+  <form method="post" action="./server/requests.php">
+    <div class="mb-5">
+      <label for="title" class="block text-gray-700 font-semibold mb-2">Title</label>
+      <input type="text" name="title" id="title" placeholder="Enter Question"
+        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    </div>
+
+    <div class="mb-5">
+      <label for="description" class="block text-gray-700 font-semibold mb-2">Description</label>
+      <textarea name="description" id="description" placeholder="Enter Description" rows="4"
+        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y"></textarea>
+    </div>
+
+    <!-- PHP Include for category dropdown -->
+    <div class="mb-5">
+      <?php include("questionCategory.php"); ?>
+    </div>
+
+    <div class="mb-4">
+      <button type="submit" name="askQuestion"
+        class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-200">Post Question</button>
+    </div>
+  </form>
 </div>
