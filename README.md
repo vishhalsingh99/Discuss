@@ -1,4 +1,3 @@
-
 # 💬 Q&A Discussion Platform
 
 A full-stack **PHP + MySQL** application where users can post questions and answers, similar to Stack Overflow. Built with a clean and responsive UI using Tailwind CSS.
